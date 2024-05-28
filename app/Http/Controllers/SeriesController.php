@@ -7,18 +7,17 @@ use Illuminate\Http\Request;
 class SeriesController extends Controller
 {
     public function index(Request $request){
+        //$request->get('id');
+        //$request->method();
+        //$request->url();
+        //return redirect('www.google.com');
         $series = [
         'serie 1',
         'serie 2',
         'serie 3'
         ];
 
-        $html = '<ul>';
-        foreach ($series as $serie) {
-        $html .= "<li>$serie</li>";
-        }
-        $html .= "</ul>";
-        return $html;
+        return view('listar-series')->with('series', $series);
 
     }
 }
