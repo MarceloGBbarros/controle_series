@@ -17,7 +17,7 @@ class SeriesController extends Controller
         'serie 3'
         ];
 
-        return view('listar-series')->with('series', $series);
+        return view('series.index')->with('series', $series);
 
     }
 }
