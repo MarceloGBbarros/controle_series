@@ -14,10 +14,18 @@ class SeriesController extends Controller
         $series = [
         'serie 1',
         'serie 2',
-        'serie 3'
+        'serie 3',
+        'A>B'
+
+
         ];
 
         return view('series.index')->with('series', $series);
 
     }
+    public function create(){
+        return view('series.create');
+    }
+
+
 }
